@@ -1,0 +1,50 @@
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+*.whl
+
+# ─── Virtual environment ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ─── Environment / secrets ────────────────────────────────────────────────────
+.env
+# Keep the example so others know what to fill in
+!.env.example
+
+# ─── Runbooks (generated at runtime) ─────────────────────────────────────────
+runbooks/
+
+# ─── Node / frontend ──────────────────────────────────────────────────────────
+web/frontend/node_modules/
+web/frontend/dist/
+web/frontend/*.tsbuildinfo
+
+# ─── IDE / editor ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ─── pytest / coverage ────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
