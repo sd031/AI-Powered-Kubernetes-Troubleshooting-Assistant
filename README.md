@@ -4,6 +4,41 @@
 
 ---
 
+## Model Setup
+
+Set `LLM_PROVIDER` in your `.env` to one of: `ollama`, `bedrock`, or `openai`.
+
+**Ollama (local, no API key)**
+```env
+LLM_PROVIDER=ollama
+OLLAMA_HOST=http://localhost:11434
+OLLAMA_MODEL=llama3.2
+```
+
+**AWS Bedrock**
+```env
+LLM_PROVIDER=bedrock
+AWS_REGION=us-east-1
+BEDROCK_MODEL_ID=us.anthropic.claude-sonnet-4-5-20250929-v1:0
+
+# Option 1 — Bearer token (recommended)
+BEDROCK_API_KEY=<your-bedrock-api-key>
+
+# Option 2 — IAM credentials
+AWS_ACCESS_KEY_ID=<key-id>
+AWS_SECRET_ACCESS_KEY=<secret>
+# Option 3 — default AWS credential chain (~/.aws/credentials, IAM role, etc.)
+```
+
+**OpenAI**
+```env
+LLM_PROVIDER=openai
+OPENAI_API_KEY=<your-openai-api-key>
+OPENAI_MODEL=gpt-4o
+```
+
+---
+
 ## Web Setup
 
 ```bash
